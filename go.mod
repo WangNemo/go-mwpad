@@ -1,4 +1,4 @@
-module mw_pad
+module github.com/WangNemo/go-mwpad
 
 go 1.19
 
