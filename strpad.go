@@ -21,24 +21,22 @@ const (
 )
 
 type Option struct {
-	PadRune      rune
-	PadType      int
-	NeedTruncate bool
+	PadRune rune
+	PadType int
 }
 
 var (
-	defaultPadRune      rune = ' '
-	defaultPadType      int  = STR_PAD_RIGHT
-	defaultNeedTruncate bool = false
+	defaultPadRune rune = ' '
+	defaultPadType int  = STR_PAD_RIGHT
 
 	errStr = ""
 )
 
-func strPad(s string, width int, opt *Option) (string, error) {
+func StrPad(s string, width int, opt *Option) (string, error) {
 	if opt == nil {
 		opt = &Option{
-			PadRune: ' ',
-			PadType: STR_PAD_RIGHT,
+			PadRune: defaultPadRune,
+			PadType: defaultPadType,
 		}
 	}
 
